@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-const Sidebar= ({ selectedItem, onSelectitem }) => {
+import React from "react";
+const Sidebar= ({ selectedItem, onItemSelect }) => {
   const items = ["Mobile", "Laptops", "Mens Wear", "Womens Wear"];
     return (
       <div className="sidebar">
