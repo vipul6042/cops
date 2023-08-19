@@ -3,7 +3,7 @@ const Sidebar= ({ selectedItem, onItemSelect }) => {
   const items = ["Mobile", "Laptops", "Mens Wear", "Womens Wear"];
     return (
       <div className="sidebar">
-      <p><b>Sports</b></p>
+      <p><b>Category</b></p>
       {items.map((item) => (
         <div
           key={item}
