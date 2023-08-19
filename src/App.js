@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css"; // Add your styles if needed
+import Sidebar from "./copmonents/sidebar";
 
-function App() {
+
+const App = () => {
+  const [selectedItem, setSelectedItem] = useState("Mobile"); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar selectedItem={selectedItem} onSelectItem={setSelectedItem} />
+      <div className="display">        
+        <h1 className="header">Shopping</h1>
+        {/* <MatchDisplay selectedSport={selectedSport} /> */}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,20 +1,18 @@
 import React, { Component } from "react";
-const sidebar = ({ selectedItem, onSelectitem }) => {
-  const itmes = ["Mobile", "Laptops", "Mens Wear", "Womens Wear"];
-};
-export default class Sidebar extends Component {
-  render() {
+const Sidebar= ({ selectedItem, onSelectitem }) => {
+  const items = ["Mobile", "Laptops", "Mens Wear", "Womens Wear"];
     return (
       <div className="sidebar">
-        <b>Category</b>
-        {items.map((item) => (
-          <div>
-            key={item}
-            className={item}
-            onClick={() => onSelectitem(item)}
-          </div>
-        ))}
-      </div>
+      <p><b>Sports</b></p>
+      {items.map((item) => (
+        <div
+          key={item}
+          className={`icon ${item}${selectedItem === item ? ' active' : ''}`}
+          onClick={() => onItemSelect(item)}
+        ></div>
+      ))}
+    </div>
     );
   }
-}
+
+  export default Sidebar;
